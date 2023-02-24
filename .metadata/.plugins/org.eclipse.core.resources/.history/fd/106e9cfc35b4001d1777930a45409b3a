@@ -1,0 +1,17 @@
+package com.upgrad.EmployeeService.cacheData;
+
+import java.util.concurrent.TimeUnit;
+
+import com.google.common.cache.Cache;
+import com.google.common.cache.CacheBuilder;
+
+public class CacheStore<T> {
+
+	private Cache<Integer, T> cache;
+	
+	public CacheStore(int expirytime, TimeUnit timeUnit) {
+		cache= CacheBuilder.newBuilder().expireAfterWrite(expirytime,timeUnit)
+				.concurrencyLevel(Runtime.getRuntime().availableProcessors())
+				.build();
+	}
+}
