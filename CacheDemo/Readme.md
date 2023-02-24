@@ -1,4 +1,4 @@
-# Spring base caching. Annotations used:
+# Spring based caching. Annotations used:
 1.	@CacheConfig provides a mechanism for sharing common cache-related settings at the class level.
 2.	@EnableCaching enables Spring's annotation-driven cache management capability.
 3.	@Cacheable
